@@ -1,0 +1,61 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+  color: rgb(255, 231, 227);
+}
+ul {
+  list-style-type: none;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.dropdown-menu {
+  position: relative;
+  top: 10px;
+  display: inline-block;
+}
+.menu__list {
+  position: absolute;
+  z-index: 20;
+  top: 35px;
+
+  width: 150px;
+  background-color: rgb(103, 92, 255);
+}
+.menu__button {
+  padding: 0.5rem 1.5rem;
+}
+.menu__button:active {
+  animation: buttonAnimation 2s linear;
+}
+.menu-list__item {
+  width: 100%;
+  padding: 0.5rem;
+  border-bottom: 1px solid rgb(8, 135, 255);
+}
+.menu__list[hidden] {
+  transition: all 0.5s ease-out;
+}
+
+@keyframes buttonAnimation {
+  0% {
+    transform: scale(0.7);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.7);
+  }
+}
